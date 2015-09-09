@@ -1,16 +1,112 @@
 <!DOCTYPE html>
 <html ng-app="FantasyFootballAuctionApp">
-  <head>
+
+<head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- <link href="styles/style.css" rel="stylesheet"> -->
     <script type='text/javascript' src='bower_components/angular/angular.js'></script>
     <script type='text/javascript' src='bower_components/angular-route/angular-route.js'></script>
     <script type='text/javascript' src='app/app.js'></script>
     <!-- <script type='text/javascript' src='app/controllers/homeController.js'></script> -->
-  </head>
+</head>
 
-  <body>
-    <div id= ''>
+<body>
+    <!-- <div id= ''>
       <button id='getRosters'>Get Rosters</button>
 
-    <div ng-view></div>
-  </body>
+    <div ng-view></div> -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Fantasy Football Auction Assistant</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <input id="email" placeholder="email">
+                    </li>
+                    <li>
+                        <input id="password" placeholder="password">
+                    </li>
+                    <li>
+                        <button id="register">Register</button>
+                        <button id="login">Sign in</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="player-div">
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Nominate Player
+          <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Brady, Tom</a></li>
+            <li><a href="#">Smith, Geno</a></li>
+            <li><a href="#">Tannehill, Ryan </a></li>
+          </ul>
+      </div>
+    <div class="draft-board">
+        <h2> Auction Result </h2>
+        <table class="board table-striped">
+            <thead>
+                <tr>
+                    <th>Team1</th>
+                    <th> $ </th>
+                    <th>Years</th>
+                    <th>Team2</th>
+                    <th> $ </th>
+                    <th>Years</th>
+                    <th>Team3</th>
+                    <th> $ </th>
+                    <th>Years</th>
+                    <th>Team4</th>
+                    <th> $ </th>
+                    <th>Years</th>
+                    <th>Team5</th>
+                    <th> $ </th>
+                    <th>Years</th>
+                    <th>Team6</th>
+                    <th> $ </th>
+                    <th>Years</th>
+                    <th>Team7</th>
+                    <th> $ </th>
+                    <th>Years</th>
+                    <th>Team8</th>
+                    <th> $ </th>
+                    <th>Years</th>
+                    <th>Team9</th>
+                    <th> $ </th>
+                    <th>Years</th>
+                    <th>Team10</th>
+                    <th> $ </th>
+                    <th>Years</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> Tom Brady</td>
+                    <td>$7.00</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Matt Forte</td>
+                    <td>$12.00</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>AJ Green</td>
+                    <td>$16.00</td>
+                    <td>3</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+
 </html>
