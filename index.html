@@ -5,6 +5,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <script src="/app/playerDB.js"> </script>
     <!-- <link href="styles/style.css" rel="stylesheet"> -->
     <!-- <script type='text/javascript' src='bower_components/angular/angular.js'></script>
     <script type='text/javascript' src='bower_components/angular-route/angular-route.js'></script>
@@ -35,16 +36,14 @@
         </div>
     </nav>
 
-    <div class="player-div">
-      <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Nominate Player
-          <span class="caret"></span></button>
-          <ul class="dropdown-menu" id="player_list">
-            <li><a href="#">Brady, Tom</a></li>
-            <li><a href="#">Smith, Geno</a></li>
-            <li><a href="#">Tannehill, Ryan </a></li>
-          </ul>
-      </div>
+    <br>
+    <br>
+    <div class="player-search">
+        <h3>Final Bid </h3>
+        $<input id="winning-bid" placeholder="$$">
+        <h3> Years in Contract </h3>
+        <input id="years" placeholder="Years">
+
     <div class="draft-board">
         <h2> Auction Result </h2>
         <table class="board table-striped">
