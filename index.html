@@ -1,22 +1,18 @@
 <!DOCTYPE html>
-<html ng-app="FantasyFootballAuctionApp">
+<html>
 
 <head>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
     <!-- <link href="styles/style.css" rel="stylesheet"> -->
-    <script type='text/javascript' src='bower_components/angular/angular.js'></script>
+    <!-- <script type='text/javascript' src='bower_components/angular/angular.js'></script>
     <script type='text/javascript' src='bower_components/angular-route/angular-route.js'></script>
-    <script type='text/javascript' src='app/app.js'></script>
+    <script type='text/javascript' src='app/app.js'></script> -->
     <!-- <script type='text/javascript' src='app/controllers/homeController.js'></script> -->
 </head>
 
 <body>
-    <!-- <div id= ''>
-      <button id='getRosters'>Get Rosters</button>
-
-    <div ng-view></div> -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -43,7 +39,7 @@
       <div class="dropdown">
         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Nominate Player
           <span class="caret"></span></button>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" id="player_list">
             <li><a href="#">Brady, Tom</a></li>
             <li><a href="#">Smith, Geno</a></li>
             <li><a href="#">Tannehill, Ryan </a></li>
@@ -106,7 +102,14 @@
         </table>
     </div>
 
+                <!--Templates-->
+    <script id="player-list-template" type="text/x-handlebars-template">
+            {{#each players}}
+                <li><h2> {{name}}  {{team}} {{position}} </h2></li>
+            {{/each}}
+        </script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </body>
 
 </html>
