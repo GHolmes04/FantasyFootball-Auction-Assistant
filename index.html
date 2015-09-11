@@ -5,12 +5,15 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+    <script src="/node_modules/handlebars/dist/handlebars.min.js"></script>
     <script src="/app/playerDB.js"> </script>
-    <!-- <link href="styles/style.css" rel="stylesheet"> -->
-    <!-- <script type='text/javascript' src='bower_components/angular/angular.js'></script>
-    <script type='text/javascript' src='bower_components/angular-route/angular-route.js'></script>
-    <script type='text/javascript' src='app/app.js'></script> -->
-    <!-- <script type='text/javascript' src='app/controllers/homeController.js'></script> -->
+    <script src="/app/positionDB.js"> </script>
+    <script src="/app/teamDB.js"> </script>
+    <script src="views.js"></script>
+    <script src="main.js"></script>
+    <script type='text/javascript' src='app/app.js'></script>
+
 </head>
 
 <body>
@@ -38,16 +41,34 @@
 
     <br>
     <br>
-    <div class="player-search">
-        <h3>Final Bid </h3>
+
+<div class="player-search">
+    <h1>Nominate Player</h1>
+    <h2>Player's name</h2>
+    <input id='playersName' placeholder= 'Last Name, First Name'>
+    <h2>Position</h2>
+    <select id="select_positions" multiple="false"></select>
+    <h2>Team</h2>
+    <select id="select_teams" multiple="false"></select>
+    <button id='findPlayer'>Find Player</button>
+    <div id='searchResults'></div>
+</div>
+
+<div class= "playerInfo">
+    <ul id= 'posibleNominations'></ul>
+
+
+    <h3>Final Bid </h3>
         $<input id="winning-bid" placeholder="$$">
         <h3> Years in Contract </h3>
         <input id="years" placeholder="Years">
+</div>
 
-    <div class="draft-board">
-        <h2> Auction Result </h2>
-        <table class="board table-striped">
-            <thead>
+
+<div class="draft-board">
+    <h2> Auction Result </h2>
+<table class="draft-table">
+  <thead>
                 <tr>
                     <th>Team1</th>
                     <th> $ </th>
@@ -81,7 +102,7 @@
                     <th>Years</th>
                 </tr>
             </thead>
-            <tbody>
+    <tbody>
                 <tr>
                     <td> Tom Brady</td>
                     <td>$7.00</td>
@@ -98,17 +119,19 @@
                     <td>3</td>
                 </tr>
             </tbody>
-        </table>
-    </div>
+</table>
+
+
 
                 <!--Templates-->
-    <script id="player-list-template" type="text/x-handlebars-template">
+    <script id="nomination-template" type="text/x-handlebars-template">
             {{#each players}}
                 <li><h2> {{name}}  {{team}} {{position}} </h2></li>
             {{/each}}
         </script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 </body>
 
 </html>

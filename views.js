@@ -1,13 +1,16 @@
 window.View = window.View || {};
 window.View.Templates = window.View.Templates || {};
 
-window.View.Templates = (function prepTemplates() {
-  var listSource = $("#player-list-template").html();
-  var listTemplate = Handlebars.compile(listSource);
+$(document).ready(function(){
 
-  return {
-    list: listTemplate,
-  };
+  window.View.Templates = (function prepTemplates() {
+    var nomSource = $("#nomination-template").html();
+    var nomTemplate = Handlebars.compile(nomSource);
 
+    return {
+      nomination: nomTemplate,
+    };
 
-})();
+  })();
+
+});

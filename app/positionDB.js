@@ -1,8 +1,12 @@
-pos = [
-'QB',
-'WR',
-'RB',
-'TE',
-'K',
-'DEF'
-]
+var PosDB = (function positionFakeDBIIFE() {
+  var pos = [
+    'QB',
+    'WR',
+    'RB',
+    'TE',
+    'K',
+    'DEF'
+    ];
+  return pos;
+  })();
+

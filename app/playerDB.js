@@ -15,6 +15,29 @@ var PlayerDB = (function playerFakeDBIIFE() {
     return results;
   }
 
+  function searchPicky(attributes, values, cmps) {
+    var numConstraints = Math.min(attributes.length, values.length);
+    var results = [];
+
+    players.forEach(function(currVal) {
+      var match = true;
+
+      for(var index = 0; index < numConstraints; index++) {
+        if(cmps[index] instanceof Function) {
+          match &= cmps[index](currVal[attributes[index]], values[index]);
+        } else {
+          match &= currVal[attributes[index]] === values[index];
+        }
+      }
+
+      if(match) {
+        results.push(currVal);
+      }
+    });
+
+    return results;
+  }
+
   var db = {
     searchByName : function(name) {
       return searchPlayers('name', name, function cmp(a, b) {
@@ -26,7 +49,8 @@ var PlayerDB = (function playerFakeDBIIFE() {
     },
     searchByTeam : function(team) {
       return searchPlayers('team' , team);
-    }
+    },
+    searchComposite : searchPicky
   };
 
   $.ajax({
