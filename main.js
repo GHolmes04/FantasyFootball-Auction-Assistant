@@ -36,9 +36,24 @@ $(document).ready(function(){
 
   $("#select_teams" )[ 0 ].appendChild( frag );
 
+  $("#submitPlayer").on('click', function (){
+    var pSelVal = {
+        name: $('input[name="selectPlayer"]').val(),
+        salary: $('input[id= "winning-bid"]').val(),
+        contractLength: $('input[id= "years"]').val()
+    };
+    var summaryHtml = View.Templates.summary({
+      playerSelected: pSelVal
+    });
+    console.log('player data is: ', pSelVal );
+    $("#summary-list").append(summaryHtml);
+  });
+
+
   //code to search through players with name pos and/or team
 
   $("#findPlayer").on('click', function(){
+    console.log("You clicked find player");
     var name = $('#playersName').val();
     var pos = $('#select_positions').val();
     var team = $('#select_teams').val();
@@ -73,9 +88,26 @@ $(document).ready(function(){
     $("#posibleNominations").html(playerSearchHtml);
 
 
-  });
 
 });
+    $('#findLeague').on('click', function(){
+    console.log('you click findLeague button');
+    $.ajax('http://localhost:3000/franchises',{
+      type: 'GET',
+      dataType: 'json'
+    })
+    .done(function(result) {
+      result.franchises.forEach(function(franchise) {
+        $("#select_franchise").append( '<option>' + franchise.name + '</option>');
+      });
+    })
+    .fail(function() {
+      console.log("error");
+    });
+
+    });
+
+  });
 
 
 
