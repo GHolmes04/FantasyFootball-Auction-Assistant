@@ -1,0 +1,63 @@
+
+.content{
+  padding-top: 100px;
+  margin: auto;
+  display: inline-block;
+  width: 100%;
+}
+.form-{
+
+}
+
+/*.navbar{
+  display: top;
+}
+
+.right{
+  width: 30%;
+  border: 3px solid #8AC007;
+  padding: 10px;
+  overflow:auto;
+}
+
+.player-search{
+  margin: auto;
+  width: 30%;
+  border:3px solid #8AC007;
+  padding-top: 20px;
+  padding: 10px;
+  display: inline;
+  float: left;
+}*/
+
+#playersName{
+  display: inline;
+  padding: 10px;
+  border: 3px solid #8AC007;
+  overflow:auto;
+}
+
+#select_positions{
+  display: inline;
+
+}
+
+/*.playerInfo {
+  margin: auto;
+  width: 30%;
+  border:3px solid #8AC007;
+  padding: 40px;
+  display: inline;
+  float: left;
+*/
+}
+
+
+
+
+
+
+
+
+
+

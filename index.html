@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <title>Fantasy Football Auction Assistant </title>
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
@@ -24,7 +26,7 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li> Find League <input id= 'leagueName' placeholder="league name"> <button id="findLeague"> Search</button></li>
+
                     <li>
                         <input id="email" placeholder="email">
                     </li>
@@ -42,6 +44,7 @@
 
     <br>
     <br>
+<div class="content">
 <div class="right col-md-2">
                 <H2> Draft Summary </H2>
                 <ul id="summary-list">
@@ -49,20 +52,26 @@
                 </ul>
             </div>
 
-<div class="player-search">
-    <h1>Nominate Player</h1>
-    <h2>Player's name</h2>
-    <input id='playersName' placeholder= 'Last Name, First Name'>
-    <h2>Position</h2>
-    <select id="select_positions" multiple="false"></select>
-    <h2>Team</h2>
-    <select id="select_teams" multiple="false"></select>
-    <button id='findPlayer'>Find Player</button>
-    <div id='searchResults'></div>
-</div>
-
+<form class="form-inline">
+    <div class="form-group">
+        <label for="InputPlayer">Player</label>
+        <input type="text" class="form-control" id="playersName" placeholder="Last, First">
+    </div>
+    <div class="form-group">
+      <label for="sel1">Position:</label>
+      <select multiple class="form-control" id="select_positions">
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="sel2">Teams:</label>
+      <select multiple class="form-control" id="select_teams">
+      </select>
+    </div>
+    <button type="submit" class="btn btn-default" id="findPlayer">Find Player</button>
+</form>
 <div class= "playerInfo">
     <ul id= 'posibleNominations'></ul>
+
 
 
     <h3>Final Bid </h3>
@@ -76,8 +85,13 @@
 </div>
 
 
+
+
+
+
 <div class="draft-board">
     <h2> Auction Result </h2>
+</div>
 </div>
 
 
@@ -91,7 +105,7 @@
     </script>
 
    <script id="summary-template" type="text/x-handlebars-template">
-        <li>{{playerSelected.name}}  Salary: $ {{playerSelected.salary}} Years: {{playerSelected.contractLength}} </li>
+        <li>{{playerSelected.name}}  Salary: $ {{playerSelected.salary}} Years: {{playerSelected.contractLength}} Team Selected {{playerSelected.franchise}}</li>
     </script>
 
 
