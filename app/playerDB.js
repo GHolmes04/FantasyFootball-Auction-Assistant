@@ -59,7 +59,7 @@ var PlayerDB = (function playerFakeDBIIFE() {
     dataType: 'json'
   })
   .done(function(response) {
-    players = response;
+    players = response.players;
   })
   .fail(function() {
     db.searchByName = db.searchByPosition = db.searchByTeam = function() {
