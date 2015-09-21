@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -7,13 +7,15 @@
     <link href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="styles/style.css" rel="stylesheet">
     <script src="/node_modules/handlebars/dist/handlebars.min.js"></script>
-    <script src="/app/playerDB.js"> </script>
-    <script src="/app/positionDB.js"> </script>
-    <script src="/app/teamDB.js"> </script>
+    <script src="/app/playerDB.js">
+    </script>
+    <script src="/app/positionDB.js">
+    </script>
+    <script src="/app/teamDB.js">
+    </script>
     <script src="views.js"></script>
     <script src="main.js"></script>
     <script type='text/javascript' src='app/app.js'></script>
-
 </head>
 
 <body>
@@ -24,7 +26,7 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li> Find League <input id= 'leagueID' placeholder="league ID"> <button id="findLeague"> Search</button></li>
+
                     <li>
                         <input id="email" placeholder="email">
                     </li>
@@ -39,65 +41,59 @@
             </div>
         </div>
     </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="leagueSearch">Find League</label>
+                    <input type="text" class="form-control" id="leagueID" placeholder="League ID">
+                </div>
+                <button type="submit" class="btn btn-default" id="findLeague">Find League</button>
+            </form>
+        </div>
+    </div>
 
-    <br>
-    <br>
-<div class="right col-md-2">
-                <H2> Draft Summary </H2>
-                <ul id="summary-list">
-                    <!-- Draft Summary Handlebars -->
-                </ul>
-            </div>
-
-<div class="player-search">
-    <h1>Nominate Player</h1>
-    <h2>Player's name</h2>
-    <input id='playersName' placeholder= 'Last Name, First Name'>
-    <h2>Position</h2>
-    <select id="select_positions" multiple="false"></select>
-    <h2>Team</h2>
-    <select id="select_teams" multiple="false"></select>
-    <button id='findPlayer'>Find Player</button>
-    <div id='searchResults'></div>
-</div>
-
-<div class= "playerInfo">
-    <ul id= 'posibleNominations'></ul>
-
-
-    <h3>Final Bid </h3>
-        $<input id="winning-bid" placeholder="$$">
-        <h3> Years in Contract </h3>
-        <input id="years" placeholder="Years">
-        <h2>Franchise</h2>
-    <select id="select_franchise" multiple="false"></select>
-
-        <button id='submitPlayer'> submit </button>
-</div>
-
-
-<div class="draft-board">
-    <h2> Auction Result </h2>
-</div>
-
-
-
-                <!--Templates-->
-    <script id="nomination-template" type="text/x-handlebars-template">
-        {{#each players}}
-            <li><input type="radio" name="selectPlayer" value="{{name}}">{{name}}  {{team}} {{position}}</li>
-        {{/each}}
-
-    </script>
-
-   <script id="summary-template" type="text/x-handlebars-template">
-        <li>{{playerSelected.name}}  Salary: $ {{playerSelected.salary}} Years: {{playerSelected.contractLength}} </li>
-    </script>
-
-
-
-
-<!--  <script id="create-teams-table" type="text/x-handlebars-template">
+        <div class="right col-md-2">
+            <H2> Draft Summary </H2>
+            <ul id="summary-list">
+                <!-- Draft Summary Handlebars -->
+            </ul>
+        </div>
+        <div class="player-search">
+            <h1>Nominate Player</h1>
+            <h2>Player's name</h2>
+            <input id='playersName' placeholder='Last Name, First Name'>
+            <h2>Position</h2>
+            <select id="select_positions" multiple="false"></select>
+            <h2>Team</h2>
+            <select id="select_teams" multiple="false"></select>
+            <button id='findPlayer'>Find Player</button>
+            <div id='searchResults'></div>
+        </div>
+        <div class="playerInfo">
+            <ul id='posibleNominations'></ul>
+            <h3>Final Bid </h3> $
+            <input id="winning-bid" placeholder="$$">
+            <h3> Years in Contract </h3>
+            <input id="years" placeholder="Years">
+            <h2>Franchise</h2>
+            <select id="select_franchise" multiple="false"></select>
+            <button id='submitPlayer'> submit </button>
+        </div>
+        <div class="draft-board">
+            <h2> Auction Result </h2>
+        </div>
+        <!--Templates-->
+        <script id="nomination-template" type="text/x-handlebars-template">
+            {{#each players}}
+            <li>
+                <input type="radio" name="selectPlayer" value="{{name}}">{{name}} {{team}} {{position}}</li>
+            {{/each}}
+        </script>
+        <script id="summary-template" type="text/x-handlebars-template">
+            <li>{{playerSelected.name}} Salary: $ {{playerSelected.salary}} Years: {{playerSelected.contractLength}} </li>
+        </script>
+        <!--  <script id="create-teams-table" type="text/x-handlebars-template">
     {{#each rosters}}
     <table>
         <h1>{{team.name}}</h1>
@@ -117,10 +113,7 @@
     </table>
     {{/rosters}}
 </script> -->
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </body>
 
 </html>
