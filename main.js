@@ -91,8 +91,10 @@ $(document).ready(function(){
 
 });
     $('#findLeague').on('click', function(){
+      var league = $('#leagueID').val();
+      debugger;
     console.log('you click findLeague button');
-    $.ajax('http://localhost:3000/franchises',{
+    $.ajax('http://localhost:3000/leagues/' + league + '/franchises',{
       type: 'GET',
       dataType: 'json'
     })
