@@ -16,10 +16,12 @@ var PlayerDB = (function playerFakeDBIIFE() {
   }
 
   function searchPicky(attributes, values, cmps) {
+
     var numConstraints = Math.min(attributes.length, values.length);
     var results = [];
 
     players.forEach(function(currVal) {
+
       var match = true;
 
       for(var index = 0; index < numConstraints; index++) {
@@ -54,11 +56,13 @@ var PlayerDB = (function playerFakeDBIIFE() {
   };
 
   $.ajax({
+
     url: 'http://localhost:3000/players',
     type: 'GET',
     dataType: 'json'
   })
   .done(function(response) {
+    debugger;
     players = response.players;
   })
   .fail(function() {
