@@ -37,8 +37,9 @@ $(document).ready(function(){
   $("#select_teams" )[ 0 ].appendChild( frag );
 
   $("#submitPlayer").on('click', function (){
+    debugger;
     var pSelVal = {
-        name: $('input[name="selectPlayer"]').val(),
+        name: $("input[type='radio'][name='selectPlayer']:checked").val(),
         salary: $('input[id= "winning-bid"]').val(),
         contractLength: $('input[id= "years"]').val()
     };
@@ -53,6 +54,7 @@ $(document).ready(function(){
   //code to search through players with name pos and/or team
 
   $("#findPlayer").on('click', function(){
+
     console.log("You clicked find player");
     var name = $('#playersName').val();
     var pos = $('#select_positions').val();
@@ -80,9 +82,11 @@ $(document).ready(function(){
       attributes.push('team');
       values.push(team);
     }
+
     var searchResults = PlayerDB.searchComposite(attributes, values, cmps);
     console.log(searchResults);
     console.log(attributes, values, cmps);
+
 
     var playerSearchHtml = View.Templates.nomination({players: searchResults});
     $("#posibleNominations").html(playerSearchHtml);
@@ -92,8 +96,7 @@ $(document).ready(function(){
 });
     $('#findLeague').on('click', function(){
       var league = $('#leagueID').val();
-      debugger;
-    console.log('you click findLeague button');
+          console.log('you click findLeague button');
     $.ajax('http://localhost:3000/leagues/' + league + '/franchises',{
       type: 'GET',
       dataType: 'json'
