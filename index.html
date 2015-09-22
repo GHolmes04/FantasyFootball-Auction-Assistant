@@ -26,7 +26,6 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-
                     <li>
                         <input id="email" placeholder="email">
                     </li>
@@ -41,59 +40,82 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid">
-        <div class="row">
-            <form class="form-inline">
-                <div class="form-group">
-                    <label for="leagueSearch">Find League</label>
-                    <input type="text" class="form-control" id="leagueID" placeholder="League ID">
-                </div>
-                <button type="submit" class="btn btn-default" id="findLeague">Find League</button>
-            </form>
-        </div>
-    </div>
-
-        <div class="right col-md-2">
+    <div class=" container-fluid  col-lg-2">
+        <div class='row'>
             <H2> Draft Summary </H2>
             <ul id="summary-list">
                 <!-- Draft Summary Handlebars -->
             </ul>
         </div>
-        <div class="player-search">
-            <h1>Nominate Player</h1>
-            <h2>Player's name</h2>
-            <input id='playersName' placeholder='Last Name, First Name'>
-            <h2>Position</h2>
-            <select id="select_positions" multiple="false"></select>
-            <h2>Team</h2>
-            <select id="select_teams" multiple="false"></select>
-            <button id='findPlayer'>Find Player</button>
-            <div id='searchResults'></div>
-        </div>
-        <div class="playerInfo">
-            <ul id='posibleNominations'></ul>
-            <h3>Final Bid </h3> $
-            <input id="winning-bid" placeholder="$$">
-            <h3> Years in Contract </h3>
-            <input id="years" placeholder="Years">
-            <h2>Franchise</h2>
-            <select id="select_franchise" multiple="false"></select>
-            <button id='submitPlayer'> submit </button>
-        </div>
-        <div class="draft-board">
-            <h2> Auction Result </h2>
-        </div>
-        <!--Templates-->
-        <script id="nomination-template" type="text/x-handlebars-template">
-            {{#each players}}
-            <li>
-                <input type="radio" name="selectPlayer" value="{{name}}">{{name}} {{team}} {{position}}</li>
-            {{/each}}
-        </script>
-        <script id="summary-template" type="text/x-handlebars-template">
-            <li>{{playerSelected.name}} Salary: $ {{playerSelected.salary}} Years: {{playerSelected.contractLength}} </li>
-        </script>
-        <!--  <script id="create-teams-table" type="text/x-handlebars-template">
+    </div>
+
+        <div class="container-fluid col-lg-8">
+            <div class="row">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="leagueSearch">Find League</label>
+                        <input type="text" class="form-control" id="leagueID" placeholder="League ID">
+                    </div>
+                    <button type="button" class="btn btn-default" id="findLeague">Find League</button>
+                </form>
+            </div>
+            <div class="row">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="playerSearch">Name</label>
+                        <input type="data" class="form-control" id="playersName" placeholder="Last Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="posSearch">Position</label>
+                        <select type="data" class="form-control" id="select_positions"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="teamSearch">Teams</label>
+                        <select type="data" class="form-control" id="select_teams" multiple="true"></select>
+                    </div>
+                    <button type="button" class="btn btn-default" id="findPlayer">Find Player</button>
+                </form>
+            </div>
+            <div class="row">
+                <form class="form-inline">
+                    <div class= "form-group ">
+                        <label for="playerResults"> Players</label>
+                        <ul id='posibleNominations'></ul>
+                    </div>
+                    <div class= "form-group">
+                        <label for="finalBid"> Final Bid  $</label>
+                        <input type="number" class="form-control" id= "winning-bid" min= "1" step = "1" value= "1">
+                    </div>
+                    <div class "form-group">
+                        <label for="years"> Contract Length (Years)</label>
+                        <input type="number" class="form-control" id= "years" min= "1" step= "1" value= "1">
+
+                    </div>
+                    <div class= "form-group">
+                        <label for="franchises"> Winning Franchise</label>
+                        <select type="data" class="form-control" id="select_franchise"></select>
+                </form>
+                <button type="button" class="btn btn-default" id="submitPlayer">Submit Results</button>
+            </div>
+
+        <h2>Franchise</h2>
+        <select id="select_franchise" multiple="false"></select>
+        <button id='submitPlayer'> submit </button>
+    </div>
+    <div class="draft-board">
+        <h2> Auction Result </h2>
+    </div>
+    <!--Templates-->
+    <script id="nomination-template" type="text/x-handlebars-template">
+        {{#each players}}
+        <li>
+            <input type="radio" name="selectPlayer" value="{{name}}">{{name}} {{team}} {{position}}</li>
+        {{/each}}
+    </script>
+    <script id="summary-template" type="text/x-handlebars-template">
+        <li>{{playerSelected.name}} Salary: $ {{playerSelected.salary}} Years: {{playerSelected.contractLength}} </li>
+    </script>
+    <!--  <script id="create-teams-table" type="text/x-handlebars-template">
     {{#each rosters}}
     <table>
         <h1>{{team.name}}</h1>
@@ -113,7 +135,7 @@
     </table>
     {{/rosters}}
 </script> -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </body>
 
 </html>
