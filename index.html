@@ -40,19 +40,11 @@
             </div>
         </div>
     </nav>
-    <div class=" container-fluid  col-lg-2">
-        <div class='row'>
-            <H2> Draft Summary </H2>
-            <ul id="summary-list">
-                <!-- Draft Summary Handlebars -->
-            </ul>
-        </div>
-    </div>
 
-        <div class="container-fluid col-lg-8">
+        <div class="container-fluid col-lg-10">
             <div class="row">
                 <form class="form-inline">
-                    <div class="form-group">
+                    <div class="form-group col-lg-2">
                         <label for="leagueSearch">Find League</label>
                         <input type="text" class="form-control" id="leagueID" placeholder="League ID">
                     </div>
@@ -78,7 +70,7 @@
             </div>
             <div class="row">
                 <form class="form-inline">
-                    <div class= "form-group ">
+                    <div class= "form-group">
                         <label for="playerResults"> Players</label>
                         <ul id='posibleNominations'></ul>
                     </div>
@@ -97,14 +89,21 @@
                 </form>
                 <button type="button" class="btn btn-default" id="submitPlayer">Submit Results</button>
             </div>
+        </div>
 
-        <h2>Franchise</h2>
-        <select id="select_franchise" multiple="false"></select>
-        <button id='submitPlayer'> submit </button>
-    </div>
     <div class="draft-board">
         <h2> Auction Result </h2>
     </div>
+
+    <div class=" container-fluid  left col-md-2">
+        <div class='row'>
+            <H2> Draft Summary </H2>
+            <ul id="summary-list">
+                <!-- Draft Summary Handlebars -->
+            </ul>
+        </div>
+    </div>
+
     <!--Templates-->
     <script id="nomination-template" type="text/x-handlebars-template">
         {{#each players}}
@@ -113,7 +112,7 @@
         {{/each}}
     </script>
     <script id="summary-template" type="text/x-handlebars-template">
-        <li>{{playerSelected.name}} Salary: $ {{playerSelected.salary}} Years: {{playerSelected.contractLength}} </li>
+        <li> {{playerSelected.name}} signed with  {{playerSelected.team}} Contract has an annual salary of  $ {{playerSelected.salary}} for {{playerSelected.contractLength}} year(s)</li>
     </script>
     <!--  <script id="create-teams-table" type="text/x-handlebars-template">
     {{#each rosters}}

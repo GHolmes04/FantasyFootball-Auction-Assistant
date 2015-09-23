@@ -41,7 +41,9 @@ $(document).ready(function(){
     var pSelVal = {
         name: $("input[type='radio'][name='selectPlayer']:checked").val(),
         salary: $('input[id= "winning-bid"]').val(),
-        contractLength: $('input[id= "years"]').val()
+        contractLength: $('input[id= "years"]').val(),
+        team: $('#select_franchise').find("option:selected").text()
+
     };
     var summaryHtml = View.Templates.summary({
       playerSelected: pSelVal
