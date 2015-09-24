@@ -45,7 +45,7 @@
             <h2> Search Results </h2>
                 <ul id='posibleNominations'> </ul>
         </div>
-        <div class='row'>
+        <div class='row' id='auctionRecap'>
             <H2> Auction Results </H2>
             <ul id="summary-list">
                 <!-- Draft Summary Handlebars -->
@@ -54,15 +54,18 @@
     </div>
     <div class="container col-md-8" id='mainDiv'>
         <div class="row">
+            <h2> Enter your league ID to find your league's teams </h2>
             <form class="form-inline">
                 <div class="form-group">
-                    <label for="leagueSearch">Find League:  </label>
-                    <input type="text" class="form-control" id="leagueID" placeholder="League ID">
+                    <label for="leagueSearch"> League ID:  </label>
+                    <input type="text" class="form-control" id="leagueID" placeholder="ID">
                 </div>
-                <button type="button" class="btn btn-info" id="findLeague">Find League</button>
+                <button type="button" class="btn btn-info" id="findLeague">Find</button>
             </form>
         </div>
         <div class="row">
+            <h2>Search for player to nominate </h2>
+            <h6>hold the control key to search through multiple teams or positions</h6>
             <form class="form-inline">
                 <div class="form-group">
                     <label for="playerSearch">Name:   </label>
@@ -73,13 +76,14 @@
                     <select type="data" class="form-control" id="select_positions" multiple="true"></select>
                 </div>
                 <div class="form-group">
-                    <label for="teamSearch">Team(s):   </label>
+                    <label for="teamSearch">NFL Team(s):   </label>
                     <select type="data" class="form-control" id="select_teams" multiple="true"></select>
                 </div>
                 <button type="button" class="btn btn-info" id="findPlayer">Find Player</button>
             </form>
         </div>
         <div class="row" id="resultsInfo">
+            <h2> Enter Winning Bid info </h2>
             <form class="form-inline">
                 <div class="form-group">
                     <label for="finalBid"> Final Bid $</label>

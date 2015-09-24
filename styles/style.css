@@ -1,12 +1,12 @@
 body {
   padding-top: 100px;
   background-image: url('/photo_13170_20090815.jpg');
-  color: #002244;
+  color: yellow;
 }
 
 h2 {
     text-decoration: underline;
-    text-shadow: 2px 2px  #C60C30;
+    text-shadow: 2px 2px  black;
     text-align: center;
 }
 
@@ -31,7 +31,7 @@ input:hover{
 
 label{
   padding-right: 5px;
-  text-shadow: 2px 2px #C60C30;
+  text-shadow: 2px 2px black;
 }
 
 select{
@@ -54,16 +54,22 @@ select{
   border-radius: 46px 46px 46px 46px;
   -moz-border-radius: 46px 46px 46px 46px;
   -webkit-border-radius: 46px 46px 46px 46px;
-  text-align: center  ;
-  padding-top: 30px;
+  text-align: center;
+  padding-top: 3%;
   padding-bottom: 30px;
   padding-left: 10px;
-  margin: 20px
+  margin: 3%
 
 
 }
 
 #leftSidebar {
+  margin-right: 2%;
+  margin-top: 3%;
+
+
+}
+#playerResults{
   background-color: green;
   border: outset white;
   border-width: 3px
@@ -73,8 +79,34 @@ select{
   border-radius: 46px 46px 46px 46px;
   -moz-border-radius: 46px 46px 46px 46px;
   -webkit-border-radius: 46px 46px 46px 46px;
-  background-attachment:
+  -webkit-box-shadow: 40px 35px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 40px 35px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 40px 35px 5px 0px rgba(0,0,0,0.75);
+  border-radius: 46px 46px 46px 46px;
+  -moz-border-radius: 46px 46px 46px 46px;
+  -webkit-border-radius: 46px 46px 46px 46px;
+  padding-bottom: 100px;
+  margin-bottom: 10%
+}
 
+#auctionRecap{
+  background-color: green;
+  border: outset white;
+  border-width: 3px
+  -webkit-box-shadow: 40px 35px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 40px 35px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 40px 35px 5px 0px rgba(0,0,0,0.75);
+  border-radius: 46px 46px 46px 46px;
+  -moz-border-radius: 46px 46px 46px 46px;
+  -webkit-border-radius: 46px 46px 46px 46px;
+  -webkit-box-shadow: 40px 35px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 40px 35px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 40px 35px 5px 0px rgba(0,0,0,0.75);
+  border-radius: 46px 46px 46px 46px;
+  -moz-border-radius: 46px 46px 46px 46px;
+  -webkit-border-radius: 46px 46px 46px 46px;
+  padding-bottom: 100px;
+  text-align: justify;
 }
 
 
