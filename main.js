@@ -37,7 +37,7 @@ $(document).ready(function(){
   $("#select_teams" )[ 0 ].appendChild( frag );
 
   $("#submitPlayer").on('click', function (){
-    debugger;
+
     var pSelVal = {
         name: $("input[type='radio'][name='selectPlayer']:checked").val(),
         salary: $('input[id= "winning-bid"]').val(),
