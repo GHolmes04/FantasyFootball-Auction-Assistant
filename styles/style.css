@@ -6,9 +6,10 @@ body {
 
 h2 {
     text-decoration: underline;
-    text-shadow: 2px 2px  black;
+    text-shadow: 4px 4px  black;
     text-align: center;
 }
+
 
 input:active {
   font-size: 14px;
@@ -38,9 +39,17 @@ select{
   max-width: 125px;
 }
 
+.form-control > option{
+    font-size: 14pt;
+    text-align: justify;
+    padding-top: 5%;
+    border-top: thin dotted black;
+
+
+}
 .row{
-  margin-bottom: 10px;
-  padding-top: 10px
+  margin-bottom: 2%;
+  padding-top: 2%;
 }
 
 #mainDiv{
@@ -57,8 +66,8 @@ select{
   text-align: center;
   padding-top: 3%;
   padding-bottom: 30px;
-  padding-left: 10px;
-  margin: 3%
+  padding-left: 20px;
+  margin: 2%
 
 
 }
@@ -122,6 +131,7 @@ select{
     background: linear-gradient(to bottom, rgba(255, 255, 0, 1) 0%, rgba(255, 255, 229, 1) 100%);
     border-width: 1px;
     border-radius: 4px;
+    padding: 0px;
 }
 
 #select_teams {
@@ -131,6 +141,7 @@ select{
     background: linear-gradient(to bottom, rgba(255, 255, 0, 1) 0%, rgba(255, 255, 229, 1) 100%);
     border-width: 1px;
     border-radius: 4px;
+    padding: 0px;
 }
 
 #summary-list {
