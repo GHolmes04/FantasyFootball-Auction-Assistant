@@ -44,7 +44,7 @@
         <div class="container-fluid col-lg-10">
             <div class="row">
                 <form class="form-inline">
-                    <div class="form-group col-lg-2">
+                    <div class="form-group">
                         <label for="leagueSearch">Find League</label>
                         <input type="text" class="form-control" id="leagueID" placeholder="League ID">
                     </div>
@@ -59,7 +59,7 @@
                     </div>
                     <div class="form-group">
                         <label for="posSearch">Position</label>
-                        <select type="data" class="form-control" id="select_positions"></select>
+                        <select type="data" class="form-control" id="select_positions" multiple="true"></select>
                     </div>
                     <div class="form-group">
                         <label for="teamSearch">Teams</label>
@@ -70,7 +70,7 @@
             </div>
             <div class="row">
                 <form class="form-inline">
-                    <div class= "form-group">
+                    <div class= "form-group" id='playerResults'>
                         <label for="playerResults"> Players</label>
                         <ul id='posibleNominations'></ul>
                     </div>
@@ -78,7 +78,7 @@
                         <label for="finalBid"> Final Bid  $</label>
                         <input type="number" class="form-control" id= "winning-bid" min= "1" step = "1" value= "1">
                     </div>
-                    <div class "form-group">
+                    <div class="form-group">
                         <label for="years"> Contract Length (Years)</label>
                         <input type="number" class="form-control" id= "years" min= "1" step= "1" value= "1">
 
