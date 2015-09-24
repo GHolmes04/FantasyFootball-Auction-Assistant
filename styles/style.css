@@ -2,6 +2,10 @@ body {
   padding-top: 100px;
   background-image: url('/photo_13170_20090815.jpg');
   color: #002244;
+}
+.row{
+  border-color: black;
+  border-radius: 5px;
 
 }
 
@@ -66,6 +70,18 @@ label{
     background: linear-gradient(to bottom, rgba(255, 255, 0, 1) 0%, rgba(255, 255, 229, 1) 100%);
     border-width: 1px;
     border-radius: 4px;
+}
+
+#leftSidebar h2{
+  text-decoration: bold;
+  text-shadow: 2px 2px #C60C30;
+  text-align: center;
+}
+
+#summary-list {
+  color: #C60C30;
+  text-shadow: 2px 2px #002244;
+  font-size: large;
 }
 
 
