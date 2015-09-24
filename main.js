@@ -3,6 +3,7 @@
 var frag = document.createDocumentFragment();
 
 $(document).ready(function(){
+  $('#pSearchForm').hide();
   PosDB.forEach( function( pos, index, array ) {
 
     var newOptionItem = document.createElement( "option" );
