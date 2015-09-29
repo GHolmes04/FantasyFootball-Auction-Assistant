@@ -16,6 +16,13 @@ $(document).ready(function(){
 
   });
 
+  $('#leagueID, #playersName').keypress(function(event) {
+
+        if (event.keyCode == 13) {
+            event.preventDefault();
+        }
+    });
+
   $("#select_positions" )[ 0 ].appendChild( frag );
 
 });

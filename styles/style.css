@@ -1,5 +1,5 @@
 body {
-  padding-top: 100px;
+  padding-top: 30px;
   background-image: url('/photo_13170_20090815.jpg');
   color: yellow;
 
@@ -12,11 +12,17 @@ h2 {
     text-align: center;
 }
 
+h6 {
+    font-size: 24px;
+    text-decoration: underline;
+    text-shadow: 5px 5px  black;
+    text-align: center;
+  }
 
 @-webkit-keyframes footballFade {
     0%   {
-          top: -300px;
-          left:-300px;
+          top: -100px;
+          left:-100px;
           width: 282px;
           height: 215px;}
     100% {top: 600px;
@@ -26,8 +32,8 @@ h2 {
           }
 }
 @keyframes footballFade {
-   0%   { top: -300px;
-          left:-300px;
+   0%   { top: -100px;
+          left:-100px;
           width: 282px;
           height: 215px;}
     100% {top: 600px;
@@ -45,8 +51,8 @@ h2 {
   text-align: center;
   margin-bottom: 20%;
   background-color: green;
-  height: 200px;
-  width: 600px;
+  height: 40%;
+  width: 100%;
 
 }
 #footballLoad{
@@ -109,6 +115,22 @@ select{
   text-align: center;
   vertical-align: center
 }
+#banner {
+  border-style: outset;
+  border-color: white;
+  border-width: 3px;
+  background-color: green;
+  text-align: center;
+  border-radius: 46px;
+  text-decoration: underline;
+  text-shadow: 5px 5px  black;
+
+}
+
+#bannerTitle{
+  font-size: 54px;
+
+}
 
 #mainDiv{
 
@@ -125,17 +147,14 @@ select{
   -moz-border-radius: 46px 46px 46px 46px;
   -webkit-border-radius: 46px 46px 46px 46px;
   text-align: center;
-  padding-top: 3%;
-  padding-bottom: 30px;
-  padding-left: 20px;
-  margin: 2%
+  padding: 3%;
+  margin-top: 3%;
+
 
 
 }
 
 #leftSidebar {
-  margin-right: 2%;
-  margin-top: 3%;
   padding: 2%;
 
 
@@ -157,7 +176,8 @@ select{
   -moz-border-radius: 46px 46px 46px 46px;
   -webkit-border-radius: 46px 46px 46px 46px;
   padding-bottom: 100px;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
+  margin-top: 5%;
   overflow:auto;
   max-height:300px;
 }
@@ -179,9 +199,11 @@ select{
   -moz-border-radius: 46px 46px 46px 46px;
   -webkit-border-radius: 46px 46px 46px 46px;
   padding: 3%;
-  text-align: justify;
+  padding-bottom: 100px;
+  text-align: center;
   overflow:auto;
   max-height:400px;
+  padding-right: 5%
 }
 
 
@@ -235,7 +257,7 @@ select{
   height: 20%
 }
 
-.unstyled{
+.list-unstyled{
   text-align: center;
   padding: 0px;
   margin: 2%;
