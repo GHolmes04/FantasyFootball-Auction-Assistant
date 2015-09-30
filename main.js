@@ -1,5 +1,7 @@
 'use strict';
 //frag variables create drop down menu for position and team
+var sa = "http://agile-woodland-4060.herokuapp.com";
+
 var frag = document.createDocumentFragment();
 
 $(document).ready(function(){
@@ -107,7 +109,7 @@ $(document).ready(function(){
     $('#findLeague').on('click', function(){
       var league = $('#leagueID').val();
           console.log('you click findLeague button');
-    $.ajax('http://localhost:3000/leagues/' + league + '/franchises',{
+    $.ajax(sa + '/leagues/' + league + '/franchises',{
       type: 'GET',
       dataType: 'json'
     })

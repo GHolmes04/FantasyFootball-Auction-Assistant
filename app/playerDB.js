@@ -1,4 +1,5 @@
 var PlayerDB = (function playerFakeDBIIFE() {
+  var sa = "http://agile-woodland-4060.herokuapp.com";
   var players;
 
   function searchPlayers(attribute, value, cmp) {
@@ -57,7 +58,7 @@ var PlayerDB = (function playerFakeDBIIFE() {
 
   $.ajax({
 
-    url: 'http://localhost:3000/players',
+    url: sa + '/players',
     type: 'GET',
     dataType: 'json'
   })
