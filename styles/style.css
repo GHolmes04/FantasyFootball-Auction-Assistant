@@ -25,10 +25,10 @@ h6 {
           left:-100px;
           width: 282px;
           height: 215px;}
-    100% {top: 600px;
-          left:300px;
-          width: 43px;
-          height: 56px;
+    100% {top: 500px;
+          left:500px;
+          width: 243px;
+          height: 215px;
           }
 }
 @keyframes footballFade {
@@ -36,10 +36,10 @@ h6 {
           left:-100px;
           width: 282px;
           height: 215px;}
-    100% {top: 600px;
-          left:300px;
-          width: 43px;
-          height: 56px;
+    100% {top: 500px;
+          left:500px;
+          width: 243px;
+          height: 215px;
           }
 
 }
@@ -155,10 +155,10 @@ select{
 }
 
 #leftSidebar {
-  padding: 2%;
-
-
+  padding: 3%;
+  margin-left: 2%;
 }
+
 #playerResults{
   background-color: green;
   border: outset white;
@@ -198,12 +198,13 @@ select{
   border-radius: 46px 46px 46px 46px;
   -moz-border-radius: 46px 46px 46px 46px;
   -webkit-border-radius: 46px 46px 46px 46px;
-  padding: 3%;
+  padding: 6%;
   padding-bottom: 100px;
   text-align: center;
   overflow:auto;
   max-height:400px;
-  padding-right: 5%
+  padding-right: 5%;
+  margin-top: 15%;
 }
 
 
@@ -217,9 +218,10 @@ select{
     background-color: rgba(255, 255, 229, 1);
     background: -webkit-radial-gradient(yellow, lightyellow);
     background: radial-gradient(yellow,lightyellow);
-    border-width: 1px;
-    border-radius: 4px;
+    border-width: 2%;
+    border-radius: 10%;
     padding: 0px;
+    border-style: outset;
 }
 
 #select_teams {
@@ -234,8 +236,8 @@ select{
 
 #summary-list {
   color: white;
-  text-shadow: 2px 2px #000010;
   font-size: 20px;
+  padding-left: 0%;
 }
 
 #winning-bid{

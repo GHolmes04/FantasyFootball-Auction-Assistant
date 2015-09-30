@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <<title>Fantasy Football Auction Assistant</title>
+    <title>Fantasy Football Auction Assistant</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
     <link rel="shortcut icon" href="cursor.png">
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +49,7 @@
         <div class="row">
             <div id="fetchingPlayers">
                 <img id='footballLoad' src="images/ajax-loader-football.gif" alt="loadScreen">
-                <h3 id='loadWarning'> Please allow a moment to retrieve all the Players from the Database </h3>
+                <h3 id='loadWarning'> Please allow a moment to fetch updated player information. </h3>
             </div>
         </div>
         <div class="row">
@@ -64,7 +64,7 @@
         </div>
         <div class="row" id='pSearchDiv'>
             <h2>Search for player to nominate </h2>
-            <h6>hold the control key to search through multiple teams or positions</h6>
+            <!--need to debug Query to allow multiple teams and pos <h6>hold the control key to search through multiple teams or positions</h6> -->
             <form class="form-inline" id='pSearchForm'>
                 <div class="form-group">
                     <label for="playerSearch">Name: </label>
